@@ -1,15 +1,9 @@
 local mod = get_mod("SpecialSpawnAnnouncer")
 local Breeds = require("scripts/settings/breed/breeds")
 local settings_volume = mod:get("mod_volume")
-local settings_chance = mod:get("mod_chance")
-local settings_shadow = mod:get("mod_shadow")
 mod.on_setting_changed = function(setting_name)
     if setting_name == "mod_volume" then
         settings_volume = mod:get(setting_name)
-    elseif setting_name == "mod_chance" then
-        settings_chance = mod:get(setting_name)
-    elseif setting_name == "mod_shadow" then
-        settings_shadow = mod:get(setting_name)
     end
 end
 
